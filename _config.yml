@@ -21,8 +21,9 @@ author: Janae Steadman
 
 navbar-links:
   About Me: "aboutme"
+  Portfolio: "gisportfolio"
   Resources:
-    - Portfolio: "gisportfolio"
+    - Portfolioo: "gisportfolioo"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://deanattali.com"
 
