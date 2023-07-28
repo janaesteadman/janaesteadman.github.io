@@ -2,7 +2,7 @@
 layout: post
 title: Sample blog post to learn markdown tips
 subtitle: There's lots to learn!
-gh-repo: janaesteadman/janaesteadman.github.io/gisportfolio
+gh-repo: janaesteadman/janaesteadman.github.io
 gh-badge: [star, fork, follow]
 tags: [test]
 comments: true
