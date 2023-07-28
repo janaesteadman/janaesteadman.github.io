@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio
-subtitle: Why you'd want to go on a date with me
+subtitle: A small collection of my work over the past year
 ---
 
 <style>
@@ -18,6 +18,30 @@ subtitle: Why you'd want to go on a date with me
   .mySlides img {
     width: 100%;
     height: auto;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 </style>
 
@@ -37,22 +61,30 @@ subtitle: Why you'd want to go on a date with me
   <div class="mySlides">
     <img src="/assets/img/final.jpeg" alt="Final">
   </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <script>
-  let slideIndex = 0;
-  showSlides();
+  let slideIndex = 1;
+  showSlides(slideIndex);
 
-  function showSlides() {
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
     let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change slide every 5 seconds
   }
 </script>
