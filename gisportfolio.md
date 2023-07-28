@@ -4,10 +4,55 @@ title: Portfolio
 subtitle: Why you'd want to go on a date with me
 ---
 
-### Oil Spill Hazard Assessment, Trinidad
-ESST 3006 Fundamentals of GIS, 2022
-![Environment Model](/assets/img/environment_model.jpeg)
-![Pipelines](/assets/img/pipelines.jpeg)
-![Tank Farm](/assets/img/tank_farm.jpeg)
-![Oil Reserves](/assets/img/oil_reserves.jpeg)
-![Final](/assets/img/final.jpeg)
+<style>
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="/assets/img/path.jpg" alt="Environment Model">
+  </div>
+  <div class="mySlides">
+    <img src="/assets/img/pipelines.jpg" alt="Pipelines">
+  </div>
+  <div class="mySlides">
+    <img src="/assets/img/tank_farm.jpg" alt="Tank Farm">
+  </div>
+  <div class="mySlides">
+    <img src="/assets/img/oil_reserves.jpg" alt="Oil Reserves">
+  </div>
+  <div class="mySlides">
+    <img src="/assets/img/final.jpg" alt="Final">
+  </div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+  }
+</script>
