@@ -5,10 +5,15 @@ subtitle: Academic Work
 ---
 
 <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
   .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin: auto;
   }
 
   .mySlides {
@@ -46,47 +51,42 @@ subtitle: Academic Work
 </style>
 
 <hr>
-<h3>Undergraduate Dissertation, 2023</h3>
-<h3>Robert E.J Duncan Prize - Best Research Project (Plant Science) </h3>   
-<img src="/assets/img/final.jpeg" alt="Final">
 
-<p> This map is part of a wider analysis into landscape evolution and fragmentation in Valencia/Matura, Trinidad and Tobago.
-</p
-
-<a href="/assets/Finallreport.pdf" target="_blank">See full report here</a>
-
-<h3>Oil Spill Hazard Assessment, Trinidad</h3>
-<h4>ESST 3006 Fundamentals of GIS, 2022</h4>
-
-<div class="slideshow-container">
-  <div class="mySlides">
-  
-    <img src="/assets/img/finaloil.jpeg" alt="Final">
+<div class="grid-container">
+  <div>
+    <h3>Undergraduate Dissertation, 2023</h3>
+    <h3>Robert E.J Duncan Prize - Best Research Project (Plant Science)</h3>
+    <img src="/assets/img/final.jpeg" alt="Final">
+    <p>This map is part of a wider analysis into landscape evolution and fragmentation in Valencia/Matura, Trinidad and Tobago.</p>
+    <a href="/assets/Finallreport.pdf" target="_blank">See full report here</a>
   </div>
-  <div class="mySlides">
-    
-    <img src="/assets/img/environment_model.jpeg" alt="Environment Model">
+  <div>
+    <h3>Oil Spill Hazard Assessment, Trinidad</h3>
+    <h4>ESST 3006 Fundamentals of GIS, 2022</h4>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="/assets/img/finaloil.jpeg" alt="Final">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/environment_model.jpeg" alt="Environment Model">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/pipelines.jpeg" alt="Pipelines">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/tank_farm.jpeg" alt="Tank Farm">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/oil_reserves.jpeg" alt="Oil Reserves">
+      </div>
+      <div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+    <p>The primary objective of this project was to create a hazard map that aids in identifying areas of potential risk related to oil facilities and natural features.</p>
   </div>
-  <div class="mySlides">
-    
-    <img src="/assets/img/pipelines.jpeg" alt="Pipelines">
-  </div>
-  <div class="mySlides">
-   
-    <img src="/assets/img/tank_farm.jpeg" alt="Tank Farm">
-  </div>
-  <div class="mySlides">
-    
-    <img src="/assets/img/oil_reserves.jpeg" alt="Oil Reserves">
-  </div>
-   <div class="mySlides">
-    
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-
-<p>The primary objective of this project was to create a hazard map that aids in identifying areas of potential risk related to oil facilities and natural features. 
-</p>
 
 <script>
   let slideIndex = 1;
