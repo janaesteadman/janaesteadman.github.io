@@ -1,0 +1,120 @@
+---
+layout: page
+title: Artist Portfolio
+subtitle: Chlorotype
+---
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<hr>
+
+<div class="grid-container">
+  <div>
+   
+    <img src="/assets/img/final.jpeg" alt="Final"> 
+    <h4>Undergraduate Dissertation, 2023</h4>
+    <h4>Robert E.J Duncan Prize - Best Research Project (Plant Science)</h4>
+    <p>This map is part of a wider analysis into landscape evolution and fragmentation in Valencia/Matura, Trinidad and Tobago.</p>
+    <a href="/assets/Finallreport.pdf" target="_blank">See full report here</a>
+  </div>
+
+  <div>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="/assets/img/finaloil.jpeg" alt="Final">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/environment_model.jpeg" alt="Environment Model">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/pipelines.jpeg" alt="Pipelines">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/tank_farm.jpeg" alt="Tank Farm">
+      </div>
+      <div class="mySlides">
+        <img src="/assets/img/oil_reserves.jpeg" alt="Oil Reserves">
+      </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <div>
+      
+    <h4>Final Project for ESST 3006 (UWI) </h4>
+    <p>The primary objective of this project was to create a hazard map that aids in identifying areas of potential risk related to oil facilities and natural features.</p>
+    </div>
+
+ <div>
+   
+    <img src="/assets/img/Water Meter Suitability.jpeg" alt="WMS"> 
+    <h4>Coursework for GEOG5032 (UOL) </h4>
+    
+  </div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
