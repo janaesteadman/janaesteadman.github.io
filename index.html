@@ -2,15 +2,33 @@
 layout: home
 subtitle: GIS | Computational Geography | Geomorphology
 ---
+
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Inigo Montoya - My Story</title>
+    <style>
+        .image-container {
+            display: flex; /* Use flexbox to align images next to each other */
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Optional: Add space between the images */
+        }
+        .image-container img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
 </head>
 <body>
-    </p>
     <h1>Hi, I'm Janae</h1>
-    <p>
-
-  <img src="/assets/img/home.jpg">
+    <div class="image-container">
+        <a href="https://janaesteadman.github.io/gisportfolio/">
+            <img src="/assets/img/home.jpg" alt="GIS Portfolio">
+        </a>
+        <a href="https://janaesteadman.github.io/artistportfolio/">
+            <img src="/assets/img/home.jpg" alt="Artist Portfolio">
+        </a>
+    </div>
+</body>
 </html>
+
