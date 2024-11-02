@@ -11,10 +11,17 @@ subtitle: GIS | Computational Geography | Geomorphology
             display: flex; /* Use flexbox to align images next to each other */
             justify-content: center; /* Center the images horizontally */
             gap: 20px; /* Optional: Add space between the images */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
         }
         .image-container img {
             max-width: 80%; /* Ensure images are responsive */
             height: auto; /* Maintain aspect ratio */
+        }
+        .text-label {
+            margin-top: 10px; /* Space above the text */
+            font-size: 1.2em; /* Increase font size for visibility */
+            text-align: center; /* Center the text */
         }
     </style>
 </head>
@@ -23,13 +30,13 @@ subtitle: GIS | Computational Geography | Geomorphology
         <a href="https://janaesteadman.github.io/gisportfolio/">
             <img src="/assets/img/front.jpg" alt="GIS Portfolio">
         </a>
+        <p class="text-label">Academic Portfolio</p> <!-- Text label under front.jpg -->
+        
         <a href="https://janaesteadman.github.io/artistportfolio/">
+            <p class="text-label">Artist Portfolio</p> <!-- Text label above back.jpg -->
             <img src="/assets/img/back.jpg" alt="Artist Portfolio">
         </a>
     </div>
-    
-
-    
 </body>
 </html>
 
