@@ -1,19 +1,25 @@
 ---
 layout: page
-title: GIS Portfolio
-subtitle: Academic Work
+subtitle: GIS Portfolio
 ---
 
 <style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Add a font for better readability */
+  }
+
+  .content-container {
+    max-width: 800px; /* Set a max-width for the content */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for spacing */
   }
 
   .slideshow-container {
     max-width: 100%;
     position: relative;
+    margin: 20px 0; /* Add margin for spacing */
   }
 
   .mySlides {
@@ -48,18 +54,24 @@ subtitle: Academic Work
   .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+  .report-iframe {
+    width: 100%;
+    height: 600px; /* Set height for the PDF display */
+    border: none; /* Remove border */
+    margin: 20px 0; /* Add margin for spacing */
+  }
 </style>
 
-<hr>
-
-<div class="grid-container">
+<div class="content-container">
   <div>
-   
     <img src="/assets/img/final.jpeg" alt="Final"> 
     <h4>Undergraduate Dissertation, 2023</h4>
     <h4>Robert E.J Duncan Prize - Best Research Project (Plant Science)</h4>
     <p>This map is part of a wider analysis into landscape evolution and fragmentation in Valencia/Matura, Trinidad and Tobago.</p>
-    <a href="/assets/Finallreport.pdf" target="_blank">See full report here</a>
+
+    <!-- Embed PDF directly instead of linking -->
+    <iframe class="report-iframe" src="/assets/Finallreport.pdf" title="Final Report"></iframe>
   </div>
 
   <div>
@@ -79,22 +91,20 @@ subtitle: Academic Work
       <div class="mySlides">
         <img src="/assets/img/oil_reserves.jpeg" alt="Oil Reserves">
       </div>
-    
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    
-    <div>
-      
-    <h4>Final Project for ESST 3006 (UWI) </h4>
-    <p>The primary objective of this project was to create a hazard map that aids in identifying areas of potential risk related to oil facilities and natural features.</p>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
- <div>
-   
-    <img src="/assets/img/Water Meter Suitability.jpeg" alt="WMS"> 
-    <h4>Coursework for GEOG5032 (UOL) </h4>
-    
+    <h4>Final Project for ESST 3006 (UWI)</h4>
+    <p>The primary objective of this project was to create a hazard map that aids in identifying areas of potential risk related to oil facilities and natural features.</p>
   </div>
+
+  <div>
+    <img src="/assets/img/Water Meter Suitability.jpeg" alt="WMS"> 
+    <h4>Coursework for GEOG5032 (UOL)</h4>
+  </div>
+</div>
 
 <script>
   let slideIndex = 1;
@@ -118,3 +128,4 @@ subtitle: Academic Work
     slides[slideIndex - 1].style.display = "block";
   }
 </script>
+
