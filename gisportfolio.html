@@ -1,4 +1,6 @@
-<style>
+<html>
+<head>
+  <style>
   body {
     margin: 0;
     padding: 0;
@@ -65,7 +67,9 @@
     margin: 20px 0; /* Add margin for spacing */
   }
 </style>
+</head>
 
+  <body>
 <div class="content-container">
   <div>
     <h4>Spatiotemporal dynamics of soil erosion response to environmental drivers in Maracas Valley, Trinidad and Tobago: A RUSLE and NDVI-Based Analysis</h4>
@@ -98,27 +102,6 @@
     <!-- Embed PDF directly instead of linking -->
     <iframe class="report-iframe" src="/assets/Finallreport.pdf" title="Final Report"></iframe>
   </div>
-
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-  }
-</script>
+</body>
+</html>
 
