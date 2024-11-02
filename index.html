@@ -2,47 +2,47 @@
     <meta charset="UTF-8">
     <title>Janae Steadman</title>
     <style>
-        body {
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
-        .image-container {
-            display: flex; /* Use flexbox to align images next to each other */
-            justify-content: center; /* Center the images horizontally */
-            gap: 20px; /* Optional: Add space between the images */
-            margin-top: 20px; /* Add space below the name */
-        }
-        .image-container div {
-            text-align: center; /* Center the text below each image */
-        }
-        .image-container img {
-            max-width: 65%; /* Set to 100% to prevent overflow */
-            height: auto; /* Maintain aspect ratio */
-            animation: float 3s ease-in-out infinite, fadeIn 2s ease-in-out; /* Apply both animations */
-            opacity: 0; /* Start hidden */
-        }
+    body {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+    .image-container {
+        display: flex; /* Use flexbox to align images next to each other */
+        justify-content: center; /* Center the images horizontally */
+        gap: 20px; /* Optional: Add space between the images */
+        margin-top: 20px; /* Add space below the name */
+    }
+    .image-container div {
+        text-align: center; /* Center the text below each image */
+    }
+    .image-container img {
+        max-width: 65%; /* Set to 100% to prevent overflow */
+        height: auto; /* Maintain aspect ratio */
+        animation: float 3s ease-in-out infinite, fadeIn 2s ease-in-out;
+        animation-fill-mode: forwards; /* Ensure the final state stays */
+    }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px); /* Move up */
-            }
-            100% {
-                transform: translateY(0); /* Return to the original position */
-            }
+    @keyframes float {
+        0% {
+            transform: translateY(0);
         }
+        50% {
+            transform: translateY(-10px); /* Move up */
+        }
+        100% {
+            transform: translateY(0); /* Return to the original position */
+        }
+    }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0; /* Start invisible */
-            }
-            100% {
-                opacity: 1; /* Fully visible */
-            }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0; /* Start invisible */
         }
-    </style>
+        100% {
+            opacity: 1; /* Fully visible */
+        }
+    }
+</style>
 </head>
 <body>
     <div class="image-container">
