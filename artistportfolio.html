@@ -6,84 +6,54 @@ title: Artist Portfolio
 <style>
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
     gap: 20px;
   }
 
-  .slideshow-container {
-    max-width: 100%;
-    position: relative;
+  .grid {
+    position: relative; /* Make position relative for absolute positioning of text */
   }
 
-  .mySlides {
-    display: none;
-  }
-
-  .mySlides img {
+  .grid img {
     width: 100%;
     height: auto;
+    display: block; /* Ensures images are block elements */
   }
 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  .description {
+    grid-column: span 4; /* Spans all columns for description */
+    text-align: center;
+    margin-top: 10px;
   }
 </style>
 
 <hr>
- <h2 style="text-align: center; margin-bottom: 20px;">Chlorotype Photography</h2>
+<h2 style="text-align: center; margin-bottom: 20px;">Decay</h2> <!-- Title for the project -->
 <div class="grid-container">
   <div class="grid">
     <img src="/assets/img/5.jpg" alt="5"> 
-    <p></p>
   </div>
 
   <div class="grid">
     <img src="/assets/img/4.jpg" alt="4"> 
-    <p></p>
   </div>
 
   <div class="grid">
     <img src="/assets/img/3.jpg" alt="3"> 
-    <p></p>
   </div>
 
   <div class="grid">
     <img src="/assets/img/2.jpg" alt="2"> 
-    <p></p>
-  </div>
-
-  <div class="grid">
-    <img src="/assets/img/6.jpg" alt="1"> 
-    <p></p>
-  </div>
-
-    <div class="grid">
-    <img src="/assets/img/7.jpg" alt="1"> 
-    <p></p>
-  </div>
-  
-    <div class="grid">
-    <img src="/assets/img/8.jpg" alt="1"> 
-    <p></p>
   </div>
 </div>
+
+<div class="description">
+  <p>Decay uses chlorotypes and they died after a year and this is the result.</p>
+</div>
+
