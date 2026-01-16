@@ -3,56 +3,73 @@ layout: page
 ---
 
 <style>
-  .grid-container {
+  .project-wrap{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .project-title{
+    text-align:center;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: 0.3px;
+  }
+
+  .project-subtext{
+    text-align:center;
+    max-width: 70ch;
+    margin: 0 auto 2rem auto;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+
+  .gallery{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    align-items: start;
   }
 
-  .grid {
-    position: relative; /* Make position relative for absolute positioning of text */
+  .tile{
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.03);
+    padding: 14px;
   }
 
-  .grid img {
-    width: 100%;
+  /* This “frame” is the key: it stops the leaves becoming enormous */
+  .frame{
+    height: 420px;            /* tweak: 360–520 depending on vibe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tile img{
+    max-width: 100%;
+    max-height: 100%;
     height: auto;
-    display: block; /* Ensures images are block elements */
+    width: auto;
+    display: block;
   }
 
-  .title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .description {
-    grid-column: span 4; /* Spans all columns for description */
-    text-align: center;
-    margin-top: 10px;
+  @media (max-width: 520px){
+    .frame{ height: 340px; }
   }
 </style>
 
-<hr>
-<h2 style="text-align: center; margin-bottom: 20px;">Echoes of Rememberance</h2> <!-- Title for the project -->
-<div class="grid-container">
-  <div class="grid">
-    <img src="/assets/img/5.jpg" alt="5"> 
-  </div>
+<div class="project-wrap">
+  <h2 class="project-title">Echoes of Remembrance</h2>
 
-  <div class="grid">
-    <img src="/assets/img/file.png" alt="4"> 
-  </div>
+  <p class="project-subtext">
+    <!-- optional: 1–3 sentences about what this is -->
+    Chlorotype prints on leaves, shown as a pair: the newly made print and the same image after a year of decay.
+  </p>
 
-  <div class="grid">
-    <img src="/assets/img/3.jpg" alt="3"> 
-  </div>
-
-  <div class="grid">
-    <img src="/assets/img/file1.png" alt="2"> 
+  <div class="gallery">
+    <div class="tile"><div class="frame"><img src="/assets/img/5.jpg" alt="Echoes of Remembrance – 1"></div></div>
+    <div class="tile"><div class="frame"><img src="/assets/img/file.png" alt="Echoes of Remembrance – 2"></div></div>
+    <div class="tile"><div class="frame"><img src="/assets/img/3.jpg" alt="Echoes of Remembrance – 3"></div></div>
+    <div class="tile"><div class="frame"><img src="/assets/img/file1.png" alt="Echoes of Remembrance – 4"></div></div>
   </div>
 </div>
-
-<div class="description">
-  <p></p>
-</div>
-
